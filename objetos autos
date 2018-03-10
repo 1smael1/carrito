@@ -1,0 +1,89 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author UTBIS
+ */
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class principal {
+      public static void main(String[] arg){
+
+        Scanner sc = new Scanner(System.in);
+        int res=0;
+        int re=0;
+        int resp=0;
+        autos autos1 = new autos("Rojo","Ford",false,"IAB-26-06",5);
+        autos autos2 = new autos("Verde","Maznoda",false,"JDL-56-56",4);
+        autos autos3 = new autos("Rosa meleño","Audi",false,"YMH-96-50",3);
+        autos autos4 = new autos("Azul chiclamino","Mercedez Benz",false,"POT-69-UY",7);
+        autos autos5 = new autos("Plata","Mitsubishi",false,"KNX-65-HJ",5);
+        autos autos6 = new autos("Cafe","Chevrolet",false,"LBJ-61-15",5);
+        autos autos7 = new autos("Gris Oxford","Nissan",false,"IAE-19-07",5);
+        autos autos8 = new autos("Amarillo","Renault",false,"EFB-13-74",7);  
+                
+        ArrayList<autos>carros= new ArrayList();
+        carros.add(autos1);
+        carros.add(autos2);
+        carros.add(autos3);
+        carros.add(autos4);
+        carros.add(autos5);
+        carros.add(autos6);
+        carros.add(autos7);
+        carros.add(autos8);
+        
+        
+      do{        System.out.println("♦-♦ Bienvenido a agencia Automotriz ♦-♦");
+        System.out.println("***Autos que ofrecemos en nuestra agencia*******\n");
+        
+        Iterator<autos> it = carros.iterator();
+        while(it.hasNext())
+        System.out.println(it.next());
+        
+         System.out.println("Desea modificar alguno de los automoviles anteriores 1.Si  2.No");
+               re= sc.nextInt();
+               if(re==1){
+                    System.out.println("1.Auto1 2.Auto2 3.Auto3 4.Auto4 5.Auto5");
+                    resp= sc.nextInt();
+                    if(resp==1) {
+                        System.out.println("Modificar numero de personas Auto1");
+                        int respu= sc.nextInt();
+                           autos1.setpersonas();
+                  
+                 }if(resp==2){
+                     System.out.println("Modificar numero de personas Auto2");
+                        int respu= sc.nextInt();
+                           autos2.setpersonas();
+                 } if(resp==3){
+                     System.out.println("Modificar numero de personas Auto3");
+                        int respu= sc.nextInt();
+                           autos3.setpersonas();
+                 } if(resp==4){
+                     System.out.println("Modificar numero de personas Auto4");
+                        int respu= sc.nextInt();
+                           autos4.setpersonas();
+                 } if(resp==5){                     
+                     System.out.println("Modificar numero de personas Auto5");
+                        int respu= sc.nextInt();
+                           autos5.setpersonas();
+                     }else{
+                
+                
+              System.out.println("Deseas salir del sistema 1.Si 2.No");
+             res= sc.nextInt();   
+               }
+               }
+            }while(res!=1);// cierra do-while
+              
+      }// cierra main
+      }  //cierra class
+  
+
+            
+
